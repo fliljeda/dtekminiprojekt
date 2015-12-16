@@ -582,7 +582,7 @@ void startGame(){
 	stringPrinter("CURRENT SCORE:", score, "AVERAGE SCORE:", avg);
 	while(ledcount < ledmax){
 		int nextled = nextRngInt(4) +1;
-		int nexttime = (time + (nextRngInt(2)+1)*500)-(ledcount*10*(nextRngInt(3)+1));
+		int nexttime = (time + (nextRngInt(2)+1)*500)-ledcount*13;
 		doThisLed(nextled, nexttime);
 		gameScoreFormat(4, 5, score, currentscore);
 		gameScoreFormat(4, 5, avg, currentavg);
